@@ -3,7 +3,6 @@ require 'colorize'
 
 class AppBase::Server < Sinatra::Application
 
-
 end
 
 puts "5: Routes.rb".red
