@@ -6,6 +6,7 @@ This repo is a collection of branches whose purpose is to convey how ruby's requ
 ## Solution 1
 The solution for exercise one should be in this order
 
+<pre>
 0: app.rb
 1: Enviroment Init
 2: db_init.rb
@@ -25,3 +26,4 @@ The solution for exercise one should be in this order
 4: server.rb
  4.1  Controllers Init
 5: Routes.rb
+</pre>
