@@ -23,7 +23,13 @@ Dir[File.dirname(__FILE__) + '/lib/*.rb']
 
 ## Globbing
 
-`'/support/**/*.rb'`
+The term globbing is sometimes used to refer to pattern matching based on wildcard characters.
+
+[Globbing Syntax](http://en.wikipedia.org/wiki/Glob_(programming)#Syntax)
+
+Examples
+* `'/support/**/*.rb'`
+* `'/support/**/**/*.rb'`
 
 ### Exercise 1
 
