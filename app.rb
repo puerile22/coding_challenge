@@ -14,13 +14,16 @@ puts "    " + __FILE__ if $V_SUBPATHS
 # -------- ONLY Change Below ------
 # ENV Bootstrap
 
+require_relative './initializers/env.rb'
 
 # DB Bootstrap
+
 require_relative './db/db_init.rb'
+require_relative 'lib/helpers.rb'
 
 # Server Bootstrap
 require_relative 'lib/server.rb'
 
-require_relative './initializers/env.rb'
 
 # Load Application
+require_relative 'lib/routes.rb'

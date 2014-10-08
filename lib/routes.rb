@@ -1,4 +1,3 @@
-require 'colorize'
 # -------- ONLY Change Above ------
 
 class AppBase::Server < Sinatra::Application
