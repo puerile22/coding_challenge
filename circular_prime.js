@@ -52,4 +52,4 @@ var circCheck = function(num,arr) {
   return false;
 };
 
-circPrim(10000000);
+circPrim(1000000);
