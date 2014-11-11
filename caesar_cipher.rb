@@ -2,7 +2,6 @@ def encode(str,num)
   ans=""
   str.split('').each do |letter|
     ans<< ((letter.ord-num) % 128).chr
-    #puts ans
   end
   return ans
 end

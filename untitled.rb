@@ -16,17 +16,11 @@ arr_library=[
   {:name,"Domain Driven Design",:author,["Eric Evans"]}
 ]
 
-# Ruby 1.9+
-# {name: "Design Patterns"}
-# {:name => "Design Patterns"}
-
-
-
-
 dogood={
 	:name,'Alice',:age,25,:phone_number,"555-555-5555",
 	:position,"event receptionist position"
 }
+
 do_good=[
 {:name,"Alice"},{:age,25},{:phone_number,"555-555-5555"},
 {:position,"event receptionist position"}
@@ -42,18 +36,10 @@ number_5={
 }
 number_5_arr=["Patrick",'Apple MacBook Air','256GB solid state drive','8GB of ram','Retina display','i7 processor','iPhoto, Safari, iMovie, iMessage']
 
-
 number_6=[
 {:name,"Maple",:age,4,:breed,"pitbull",:favourite_game,"tug-o-war",:love,'swimming in the lake'},
 {:name,'Atlas',:age,3,:breed,"boxer",:favourite_game,'fetch',:love,'swimming in the lake'}
 ]
-
-
-
-
-
-
-
 
 number_7={
 	"favourite_restaurant"=>{:name,"Patrick's Piza Palace",:address,"716 Congress",:health_score,100},
@@ -61,12 +47,6 @@ number_7={
 	"kate"=>{:appetizer,'calzone',:entree,'a slice of pizza',:dessert,'cannoli'},
 	"harsh"=>{:appetizer,'garlic knots',:entree,'spaghetti & eggplant',:dessert,'cheesecake'}
 }
-#number_7=[favourite_restaurant,nick,kate,harsh]
-
-
-
-
-
 
 class Restaurant
 	def self.infor
