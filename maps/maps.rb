@@ -62,3 +62,29 @@ class Map
     return distances
   end
 end
+
+
+class Graph
+  def addNode(value)
+  end
+
+  def removeNode(value)
+  end
+
+  def addEdge(node_value_1, node_value_2, cost)
+  end
+
+  def removeEdge(node_value_1, node_value_2)
+  end
+end
+
+class Node
+  attr_accessor :edges, :value
+  def initialize(value)
+    @value = value
+    @edges = {}
+  end
+
+  def addEdge(node, cost)
+  end
+end
