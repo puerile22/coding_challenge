@@ -24,7 +24,6 @@ describe Graph do
     end
     context "cities that are disconnected" do
       it "returns nil" do
-        binding.pry
         distance = map.find_path("c1", "c2")
         expect(distance).to eq(nil)
       end

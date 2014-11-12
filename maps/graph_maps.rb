@@ -25,8 +25,34 @@ class Graph
   end
 
   def find_path(node_value_1, node_value_2)
+    passed_cities = [node_value_1]
+    distance = 0
     return 0 if node_value_1 == node_value_2
-    
+    queue = [@map[node_value_1], {:distance => 0, :passed_cities => passed_cities}]
+    while queue.length >0
+      node = queue.shift
+      obj = queue.shift
+      node.edges.each do |k, v|
+        # binding.pry
+        new_passed_cities = []
+        obj[:passed_cities].each do |x|
+          new_passed_cities << x
+        end
+        new_distance = v + obj[:distance]
+        if distance != 0 
+          next if distance < v || distance < new_distance
+        end
+        if k == node_value_2
+          distance = new_distance
+        elsif !new_passed_cities.include?(k)
+          new_passed_cities << k
+          queue << @map[k]
+          queue << {:distance => new_distance, :passed_cities => new_passed_cities}
+        end
+      end
+    end
+    return distance if distance != 0
+    return nil
   end
 end
 
@@ -43,5 +69,22 @@ class Node
 
   def removeEdge(node)
     @edges.delete(node.value)
+  end
+
+  def find_path(node_value_1, node_value_2, cost = 0, passed_cities = [])
+    old_passed_cities = obj[:passed_cities] 
+    city[:roads].each do |k, v|
+      new_passed_cities = []
+      old_passed_cities.each do |x|
+        new_passed_cities << x
+      end
+      new_distance = v[:distance] + obj[:distance]
+      if k == city2
+        distances << new_distance
+      elsif !new_passed_cities.include?(k)
+        new_passed_cities << k
+        queue << {city: @map[k], distance:new_distance, passed_cities: new_passed_cities}
+      end
+    end
   end
 end
